@@ -1,12 +1,17 @@
 ﻿using System;
 
-namespace Vacina
+namespace DesafioTecnico
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("a");
+            // Programa Censo 
+
+            Censo censo = new Censo();
+            censo.Ativar();
+            
+            
         }
     }
 }
