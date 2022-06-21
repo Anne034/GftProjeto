@@ -23,6 +23,8 @@ namespace DesafioTecnico
                 Console.WriteLine(cat.RetornarCategoria(15));
                 Console.WriteLine(cat.RetornarCategoria(18));
                 Console.WriteLine(cat.RetornarCategoria(25));
+
+                // Falta organizar os testes aki
             }
 
 
