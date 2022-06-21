@@ -6,28 +6,44 @@ namespace DesafioTecnico
     {
         static void Main(string[] args)
         {
-            // Programa Censo 
-
-            //Censo censo = new Censo();
-            //censo.Ativar();
-            //static void Main(string[] args)
+            bool continuar = true;
+            while (continuar)
             {
-                //Censo censo = new Censo();
-                //censo.Ativar();
+                Console.WriteLine("Exercicios GFT");
+                Console.WriteLine("Selecione um exercicio para testar:");
+                Console.WriteLine("(1) Censo");
+                Console.WriteLine("(2) Categoria Nadador");
+                Console.WriteLine("(3) Total Vendas");
+                Console.WriteLine("(4) Concessionaria");
+                Console.WriteLine("(5) Sair");
 
-                //Antigo teste....
-                CategoriaNadador cat = new CategoriaNadador();
-                Console.WriteLine(cat.RetornarCategoria(5));
-                Console.WriteLine(cat.RetornarCategoria(9));
-                Console.WriteLine(cat.RetornarCategoria(12));
-                Console.WriteLine(cat.RetornarCategoria(15));
-                Console.WriteLine(cat.RetornarCategoria(18));
-                Console.WriteLine(cat.RetornarCategoria(25));
+                string opcao = Console.ReadLine();
+                switch (opcao)
+                {
+                    case "1":
+                        Censo censo = new Censo();
+                        censo.Ativar();
+                        break;
+                    case "2":
+                        CategoriaNadador cat = new CategoriaNadador();
+                        cat.RetornarCategoria();
+                        break;
+                    case "3":
+                        TotalVendas total = new TotalVendas();
+                        total.AtivarTransacoes();
+                        break;
+                    case "4":
+                        Concessionaria concessionaria = new Concessionaria();
+                        concessionaria.MostrarTabela();
+                        break;
+                    default:
+                        continuar = false;
+                        Console.WriteLine("Obrigado por usar o programa!");
+                        break;
 
-                // Falta organizar os testes aki
+                }
             }
-
-
         }
+
     }
 }
